@@ -1,0 +1,7 @@
+@use 'styles/colors';
+@use 'styles/typography';
+
+body {
+    font-family: var(--font-primary);
+    font-size: var(--text-base-size);
+}

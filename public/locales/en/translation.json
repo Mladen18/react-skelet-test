@@ -1,0 +1,26 @@
+{
+    "hello-world": "Hello World",
+    "change-theme": "Change theme",
+    "home": "Homepage",
+    "my-profile": "My profile",
+    "page-not-found": "Page not found",
+    "login-error": "Login error",
+    "forgot-your-password-link": "Forgot your password", 
+    "forgot-your-password-title": "Forgot your password?",
+    "forgot-your-password-text": "Enter your email address and we'll send you recovery link with instructions to reset your password.",
+    "reset-password-title": "Reset your password",
+    "reset-password-text": "Enter and confirm your new password below. Your new password must contain at least 8 characters, 1 uppercase, 1 symbol and 1 number.",
+    "return-to-login": "Return to login",
+    "request-password-reset-error": "Request password reset error",
+    "required": "This field is required",
+    "field-error-required": "Please enter {{field}}",
+    "field-error-invalid": "{{field}} is invalid",
+    "field-placeholder": "Enter your {{field}}",
+    "email-label": "Email",
+    "password-label": "Password",
+    "password-error-invalid": "Must contain 8 characters. There must be at least 1 Uppercase letter, 1 lowercase letter, 1 Number and 1 special case character. ",
+    "login-submit": "Submit",
+    "reset-password-submit": "Submit",
+    "request-reset-password-submit": "Submit"
+    
+}

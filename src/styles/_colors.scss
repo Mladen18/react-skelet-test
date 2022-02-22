@@ -1,0 +1,12 @@
+:root,
+[data-theme='light'] {
+    --color: black;
+    --color-bg: white;
+    --color-error: red;
+    --color-shadow: #b3b3b3;
+}
+
+[data-theme='dark'] {
+    --color: white;
+    --color-bg: black;
+}
