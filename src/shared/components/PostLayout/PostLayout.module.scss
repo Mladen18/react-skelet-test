@@ -1,0 +1,13 @@
+@use 'styles/colors' as *;
+
+.post {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--secondary-light);
+    max-width: 500px;
+    width: auto;
+    height: 450px;
+    padding: 5px 10px;
+    text-align: center;
+}

@@ -1,0 +1,42 @@
+@use 'styles/media' as *;
+
+.container {
+    width: 100%;
+}
+
+.containerMore {
+    width: 100%;
+    margin-top: 16px;
+}
+
+.resetPassword {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.troubleLabel {
+    margin-right: 8px;
+}
+
+.labelOr {
+    color: var(--gray-dark-300);
+    font-weight: 600;
+}
+
+.divider {
+    margin: 16px 0;
+
+    @media screen and (min-width: $tablet) {
+        margin: 32px 0;
+    }
+}
+
+.googleLogo {
+    margin-right: 16px;
+}
+
+.btn {
+    width: 100%;
+    margin-bottom: 16px;
+}

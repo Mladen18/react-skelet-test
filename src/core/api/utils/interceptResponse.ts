@@ -1,6 +1,6 @@
 import axios, { AxiosInstance } from 'axios';
-import { RoutesEnum } from '../../../modules/navigation/enums';
-import { clearLocalStorage } from '../../localStorage/utils';
+import { RoutesEnum } from 'shared/enums/RoutesEnum';
+import { clearLocalStorage } from '../../shared/utils';
 import { tokenApiService } from '../../token/services/TokenApiService';
 import { tokenService } from '../../token/services/TokenService';
 import appendToken from './appendToken';

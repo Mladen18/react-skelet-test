@@ -1,0 +1,57 @@
+.mobileAppBar {
+    position: relative;
+    background-color: var(--gray-dark-600);
+    box-shadow: none;
+    padding: 16px;
+}
+
+.mobileLogoIcon {
+    width: 48px;
+    height: 48px;
+    fill: var(--white);
+}
+
+.closeBtn {
+    width: 48px;
+    height: 48px;
+    margin-left: auto;
+}
+
+.mobileCloseIcon {
+    width: 24px;
+    height: 24px;
+    fill: var(--white);
+    padding: 0;
+}
+
+.menuContent {
+    height: 100%;
+    background-color: var(--gray-dark-600);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .menuItem {
+        color: var(--white);
+        margin-top: 88px;
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            border-bottom: 2px solid var(--gray);
+        }
+
+        &:first-of-type {
+            margin-top: 0;
+        }
+    }
+
+    .itemActive {
+        color: var(--primary);
+        border-bottom: 2px solid transparent;
+
+        &:hover {
+            border-bottom: 2px solid transparent;
+        }
+    }
+}

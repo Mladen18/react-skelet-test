@@ -1,0 +1,27 @@
+@use 'styles/colors' as *;
+@use 'styles/media' as *;
+@use 'styles/typography' as *;
+
+.header {
+    width: 100%;
+    background-color: white;
+    box-shadow: none;
+}
+
+.toolbar {
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+}
+
+.nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logoIcon {
+    width: 48px;
+    height: 48px;
+    fill: var(--tertiary);
+}

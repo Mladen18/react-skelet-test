@@ -1,4 +1,4 @@
-import { IEntity } from '../../../shared/interfaces';
+import { IEntity } from 'shared/interfaces/IEntity';
 import { ProfileRolesEnum } from '../enums';
 
 interface IProfile extends IEntity {

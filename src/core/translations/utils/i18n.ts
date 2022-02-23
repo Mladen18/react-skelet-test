@@ -1,8 +1,8 @@
 import i18n from 'i18next';
 import Backend from 'i18next-http-backend';
 import { initReactI18next } from 'react-i18next';
-import { LocalStorageKeysEnum } from '../../localStorage/enums';
-import { getItemFromLocalStorage } from '../../localStorage/utils';
+import { LocalStorageKeysEnum } from '../../shared/enums';
+import { getItemFromLocalStorage } from '../../shared/utils';
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from '../constants';
 import { AvailableLanguageKeysEnum } from '../enums';
 

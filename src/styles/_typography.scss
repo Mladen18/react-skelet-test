@@ -1,7 +1,7 @@
-:root {
-    --font-primary: sans-serif;
-    --font-scondary: serif;
+@use 'styles/media' as *;
 
-    // body font size
+:root {
+    --font-primary: Rubik, sans-serif;
+    --font-secondary: serif;
     --text-base-size: 16px;
 }

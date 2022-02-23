@@ -1,0 +1,15 @@
+@use 'styles/media' as *;
+
+.container {
+    width: 100%;
+    max-width: 1320px;
+    padding: 16px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+
+    @media screen and (min-width: $desktop) {
+        padding: 44px 0;
+    }
+}

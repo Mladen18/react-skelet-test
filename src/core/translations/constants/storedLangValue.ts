@@ -1,5 +1,5 @@
-import { LocalStorageKeysEnum } from '../../localStorage/enums';
-import { getItemFromLocalStorage } from '../../localStorage/utils';
+import { LocalStorageKeysEnum } from '../../shared/enums';
+import { getItemFromLocalStorage } from '../../shared/utils';
 
 const storedLangValue: string | null = getItemFromLocalStorage(
     LocalStorageKeysEnum.appLang

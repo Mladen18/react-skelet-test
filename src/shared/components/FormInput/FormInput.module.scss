@@ -1,0 +1,33 @@
+@use 'styles/colors' as *;
+@use 'styles/typography' as *;
+
+.formInput {
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.formInputError {
+    border: 1px solid var(--error-light);
+}
+
+.formLabelError {
+    @extend .labelUppercase !optional;
+    color: var(--error-dark);
+}
+
+.messageError {
+    color: var(--error-dark);
+    margin: 0 0 0 4px;
+}
+
+.errorIcon {
+    fill: var(--error-dark);
+    width: 16px;
+    height: 16px;
+}
+
+.errorContainer {
+    display: flex;
+    align-items: center;
+}

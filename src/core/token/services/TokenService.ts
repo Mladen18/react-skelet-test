@@ -1,8 +1,8 @@
-import { LocalStorageKeysEnum } from '../../localStorage/enums';
+import { LocalStorageKeysEnum } from '../../shared/enums';
 import {
     getItemFromLocalStorage,
     setItemToLocalStorage,
-} from '../../localStorage/utils';
+} from '../../shared/utils';
 
 class TokenService {
     get token(): string | null {

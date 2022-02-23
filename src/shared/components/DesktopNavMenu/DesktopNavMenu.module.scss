@@ -1,0 +1,56 @@
+@use 'styles/media' as *;
+
+.navList {
+    display: none;
+    list-style: none;
+
+    @media screen and (min-width: $desktop) {
+        display: flex;
+        align-items: center;
+        gap: 56px;
+        margin-left: 52px;
+    }
+}
+
+.menuIcon {
+    width: 24px;
+    height: 24px;
+    fill: var(--tertiary);
+    cursor: pointer;
+
+    @media screen and (min-width: $desktop) {
+        display: none;
+    }
+}
+
+.notificationIcon {
+    width: 24px;
+    height: 24px;
+    fill: var(--tertiary);
+    cursor: pointer;
+}
+
+.avatarIcon {
+    display: none;
+    width: 56px;
+    height: 56px;
+    fill: var(--tertiary);
+
+    @media screen and (min-width: $desktop) {
+        display: block;
+    }
+}
+
+.navIcons {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    & > .navIcon:not(:first-child) {
+        margin-left: 25px;
+
+        @media screen and (min-width: $tablet) {
+            margin-left: 33px;
+        }
+    }
+}

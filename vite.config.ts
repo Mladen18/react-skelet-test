@@ -23,7 +23,11 @@ export default defineConfig({
             generateScopedName: (name, filename, css) => {
                 // vite error: Transforming const to the configured target environment ("es5") is not supported yet
                 // using var instead of const for the moment
-                var file = path.basename(filename, '.module.scss');
+                var file = path
+                    .basename(filename, '.module.scss')
+                    .replace('module.scss?used', '_')
+                    .split('.')
+                    .join('');
                 var i = css.indexOf('.' + name);
                 var line = css.substr(0, i).split(/[\r\n]/).length;
                 return file + '_' + name + '_' + line;

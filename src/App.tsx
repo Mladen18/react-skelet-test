@@ -1,40 +1,38 @@
-import { ThemeContext } from 'core/theme/context';
-import { LoginPage } from 'modules/auth/pages/LoginPage';
-import { RequestPasswordResetPage } from 'modules/auth/pages/RequestPasswordResetPage';
-import { ResetPasswordPage } from 'modules/auth/pages/ResetPasswordPage';
-import { FC, useContext } from 'react';
-import { BrowserRouter as Router, Switch } from 'react-router-dom';
+import { SinglePost } from 'pages/post';
+import { Posts } from 'pages/posts';
+import { FC } from 'react';
+import { BrowserRouter as Router, Redirect, Switch } from 'react-router-dom';
+import { GuestRoute } from 'shared/components/GuestRoute';
+import { RoutesEnum } from 'shared/enums/RoutesEnum';
 import './App.scss';
-import HomePage from './modules/home/pages/HomePage';
-import { GuestRoute, PrivateRoute } from './modules/navigation/components';
-import { RoutesEnum } from './modules/navigation/enums';
 
 const App: FC = () => {
-    const { theme } = useContext(ThemeContext);
-
+    const propMessage = 'Hello from ';
     return (
-        <div data-theme={theme}>
-            <Router>
-                <Switch>
-                    <GuestRoute
-                        exact
-                        path={RoutesEnum.LOGIN}
-                        component={LoginPage}
-                    />
-                    <GuestRoute
-                        exact
-                        path={RoutesEnum.REQUEST_PASSWORD_RESET}
-                        component={RequestPasswordResetPage}
-                    />
-                    <GuestRoute
-                        exact
-                        path={RoutesEnum.RESET_PASSWORD}
-                        component={ResetPasswordPage}
-                    />
-                    <PrivateRoute path={RoutesEnum.HOME} component={HomePage} />
-                </Switch>
-            </Router>
-        </div>
+        <Router>
+            <Switch>
+                <GuestRoute
+                    exact
+                    path={RoutesEnum.POSTS}
+                    render={() => (
+                        <Posts message={propMessage} compName={'Posts'} />
+                    )}
+                />
+                <GuestRoute
+                    exact
+                    path={RoutesEnum.POST}
+                    render={() => (
+                        <SinglePost
+                            message={propMessage}
+                            compNanme={'Single Post'}
+                        />
+                    )}
+                />
+                <GuestRoute path={RoutesEnum.NOT_FOUND}>
+                    <Redirect to="/posts" />
+                </GuestRoute>
+            </Switch>
+        </Router>
     );
 };
 
