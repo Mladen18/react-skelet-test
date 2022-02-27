@@ -11,9 +11,14 @@ import styles from './Header.module.scss';
 
 const menuItems: INavLink[] = [
     {
-        id: 6,
+        id: 1,
         labelKey: 'nav-posts',
         pathname: RoutesEnum.POSTS,
+    },
+    {
+        id: 2,
+        labelKey: 'nav-form',
+        pathname: RoutesEnum.FORM,
     },
 ];
 

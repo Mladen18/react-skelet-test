@@ -3,6 +3,7 @@ export enum RoutesEnum {
     HOME = '/',
     POSTS = '/posts',
     POST = '/post/:postId',
+    FORM = '/form',
     MY_PROFILE = '/my-profile',
     LOGIN = '/login',
     REQUEST_PASSWORD_RESET = '/reset-password',

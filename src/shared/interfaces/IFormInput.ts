@@ -38,7 +38,7 @@ interface IFormInput
     /**
      * Console log name
      */
-    compName: string;
+    compName?: string;
 
     /**
      * Placeholder
@@ -48,12 +48,12 @@ interface IFormInput
     /**
      * Search handler
      */
-    searchHandler: (event: string) => string;
+    // searchHandler: (event: string) => string;
 
     /**
      * Console message
      */
-    message: string;
+    message?: string;
 }
 
 export default IFormInput;

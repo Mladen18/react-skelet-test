@@ -18,11 +18,6 @@ const FormInput: FC<IFormInput> = ({
 }) => {
     const { palette } = useTheme();
 
-    // Serach change handler
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        searchHandler(e.target.value);
-    };
-
     return (
         <div className={className}>
             <Label color={error ? palette.error.dark : palette.text.primary}>
@@ -35,7 +30,6 @@ const FormInput: FC<IFormInput> = ({
                 label=""
                 error={error}
                 inputProps={props}
-                onChange={handleChange}
             />
 
             {error && errorMessage && (

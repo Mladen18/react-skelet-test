@@ -18,6 +18,11 @@ const companyLinks: INavLink[] = [
         labelKey: 'nav-posts',
         pathname: RoutesEnum.POSTS,
     },
+    {
+        id: 2,
+        labelKey: 'nav-form',
+        pathname: RoutesEnum.FORM,
+    },
 ];
 
 const socialLinks: ILink[] = [

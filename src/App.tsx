@@ -1,5 +1,6 @@
 import { SinglePost } from 'pages/post';
 import { Posts } from 'pages/posts';
+import { FormPage } from 'pages/form';
 import { FC } from 'react';
 import { BrowserRouter as Router, Redirect, Switch } from 'react-router-dom';
 import { GuestRoute } from 'shared/components/GuestRoute';
@@ -24,8 +25,15 @@ const App: FC = () => {
                     render={() => (
                         <SinglePost
                             message={propMessage}
-                            compNanme={'Single Post'}
+                            compName={'Single Post'}
                         />
+                    )}
+                />
+                <GuestRoute
+                    exact
+                    path={RoutesEnum.FORM}
+                    render={() => (
+                        <FormPage message={propMessage} compName={'Form'} />
                     )}
                 />
                 <GuestRoute path={RoutesEnum.NOT_FOUND}>

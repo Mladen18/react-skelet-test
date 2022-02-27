@@ -15,13 +15,13 @@ import style from './SinglePost.module.scss';
 
 type SinglePost = {
     message: string;
-    compNanme: string;
+    compName: string;
 };
 
-const SinglePost: FC<SinglePost> = ({ message, compNanme }) => {
+const SinglePost: FC<SinglePost> = ({ message, compName }) => {
     const [post, setPost] = useState<IPost | undefined>();
     // Log Message props
-    const componentName = compNanme;
+    const componentName = compName;
     useEffect(() => {
         logCompName(message, componentName);
     }, [message]);
