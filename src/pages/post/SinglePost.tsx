@@ -42,9 +42,6 @@ const SinglePost: FC<SinglePost> = ({ message, compName }) => {
         }
     }, [setPost, postId, data]);
 
-    const loadPost = data
-        ? data[0].data
-        : { id: 0, title: '', body: '', userId: 0 };
     const loadUsers = data ? data[1].data : [];
     const loadComments = data ? data[2].data : [];
 
@@ -56,17 +53,17 @@ const SinglePost: FC<SinglePost> = ({ message, compName }) => {
                 compName={'Post Layout'}>
                 {status === 'loading' && <H variant="h2">Loading...</H>}
                 {status === 'error' && <H variant="h2">Error</H>}
-                {status === 'success' && loadPost && (
+                {status === 'success' && post && (
                     <>
                         <User
-                            id={post?.id}
+                            id={post.id}
                             users={loadUsers}
                             message={message}
                             compName={'User Block'}
                         />
                         <Post
-                            title={post?.title}
-                            body={post?.body}
+                            title={post.title}
+                            body={post.body}
                             message={message}
                             compName={'Post Block'}
                         />
@@ -74,7 +71,7 @@ const SinglePost: FC<SinglePost> = ({ message, compName }) => {
                         {loadComments !== null && loadComments.length > 0 ? (
                             <Comment
                                 comments={loadComments}
-                                id={post?.id}
+                                id={post.id}
                                 message={message}
                                 compName={'Comment Block'}
                             />
